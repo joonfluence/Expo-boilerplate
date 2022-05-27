@@ -10,7 +10,11 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'airbnb',
+  ],
   parserOptions: {
     parser: '@typescript-eslint/parser',
     ecmaVersion: 'latest',
@@ -67,6 +71,10 @@ module.exports = {
         ts: 'never',
         tsx: 'never',
       },
+    ],
+    'no-use-before-define': [
+      'error',
+      { function: false, class: false, variables: false },
     ],
   },
 };

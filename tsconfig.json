@@ -1,6 +1,17 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
+    "jsx": "react-jsx",
+    "experimentalDecorators": true,
+    "baseUrl": "./",
+    "emitDecoratorMetadata": true,
+    "strict": true,
+    "paths": {
+      "~components/*": ["src/components/*"],
+      "~screens/*": ["src/screens/*"],
+      "~assets/*": ["assets/*"],
+      "~constants/*": ["constants/*"]
+    },
+    "strictPropertyInitialization": false
   }
 }
