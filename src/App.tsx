@@ -1,20 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { ThemeProvider } from 'styled-components';
 import styled from 'styled-components/native';
+
+import theme from '../themes';
+import Navigation from './navigation';
 
 export default function App() {
   return (
-    <Wrapper>
-      <Title>Open up App.tsx to start working on your app!!</Title>
-      <StatusBar />
-    </Wrapper>
+    <ThemeProvider theme={theme}>
+      <SafeAreaProvider>
+        <Navigation />
+        <StatusBar />
+      </SafeAreaProvider>
+    </ThemeProvider>
   );
 }
-
-const Wrapper = styled.View`
-  flex: 1;
-  background-color: #fff;
-  align-items: center;
-  justify-content: center;
-`;
-
-const Title = styled.Text``;

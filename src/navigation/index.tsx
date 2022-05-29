@@ -36,11 +36,11 @@ function RootNavigator() {
 
   return (
     <Stack.Navigator>
-      {!accessToken && (
+      {/* {!accessToken && (
         <Stack.Screen name="SignIn" options={{ headerShown: false }}>
           {(props) => <SignInScreen />}
         </Stack.Screen>
-      )}
+      )} */}
       <Stack.Screen
         name="Root"
         component={BottomTabNavigator}
